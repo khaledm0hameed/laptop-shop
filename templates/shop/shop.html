@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+
+
+{% for i in Pro%}
+<div class="shop_wrap section_padding_b">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8">
+                        <div class="single_list_product my-auto">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="list_product_img">
+                                        <div class="lp_img">
+<<<<<<< HEAD
+                                                <img loading="lazy"  src="{{i.iamge.url}}" alt="product">
+=======
+                                                <img loading="lazy"  src="{{i.image.url}}" alt="product">
+>>>>>>> 54f88f3 (repair this project)
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="product_content">
+                                        <a href="">
+                                            <h5>{{i.name}}</h5>
+                                        </a>
+                                        <div class="ratprice">
+                                            <div class="price">
+                                                <span class="org_price">{{i.price}}</span>
+                                            </div>
+                                           
+                                        </div>
+                                        <p class="product_list_desc">
+                                           {{i.description}}
+                                        </p>
+                                        <div class="product_list_btns">
+                                            <a href='{% url 'detail' i.id %}'>
+                                                <button class="list_product_btn"><span class="icon"></span> Detail</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>  
+         
+    </div>                      
+</div>  
+{%endfor%}
+ 
+{%endblock content%}

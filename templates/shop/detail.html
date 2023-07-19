@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+
+<div class="container">
+    <div class="breadcrumbs">
+        <a href="#"><i class="las la-home"></i></a>
+        <a href="#">Shop</a>
+        <a href="#" class="active">{{obj.name}}</a>
+    </div>
+</div>
+
+<!-- product view -->
+<div class="product_view_wrap section_padding_b">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="product_view_slider">
+                    <div class="single_viewslider">
+<<<<<<< HEAD
+                        <img loading="lazy"  src="{{obj.iamge.url}}" alt="product">
+=======
+                        <img loading="lazy"  src="{{obj.image.url}}" alt="product">
+>>>>>>> 54f88f3 (repair this project)
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="product_info_wrapper">
+                    <div class="product_base_info">
+                        <h1>{{obj.name}}</h1>
+
+
+                        <div class="product_other_info">
+                            <p><span>Brand:</span>{{obj.Brand}}</p>
+                            <p><span>Category:</span>{{obj.categore}}</p>
+                        </div>
+
+
+                        <div class="price mt-3 mb-3 d-flex align-items-center">
+                            <span class="org_price ms-2">{{obj.price}}</span>
+                        </div>
+                        <div class="pd_dtails">
+                            <p>
+                                {{obj.description}}
+                            </p>
+                        </div>
+
+
+                 
+                       
+
+                    </div>
+                   
+                    <div class="product_buttons">
+                        <a href="{% url 'cart_add' obj.id %}">Add To Cart</a>
+                        
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock content%}
